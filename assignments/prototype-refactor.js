@@ -35,8 +35,6 @@ class CharacterStats extends GameObject{
     takeDamage(){
         return `${this.name} took damage.`
     }
-
-
 }
 
 /*
