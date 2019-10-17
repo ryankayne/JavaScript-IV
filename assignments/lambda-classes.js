@@ -37,11 +37,11 @@ class Student extends Person {
             return console.log(item);
         })
     }
-    PRAssignment(){
-        return `${student.name} has submitted a PR for ${this.subject}`;
+    PRAssignment(subject){
+        return `${this.name} has submitted a PR for ${subject}`;
     }
-    sprintChallenge(){
-        return `${student.name} has begun sprint challenge on ${this.subject}`;
+    sprintChallenge(subject){
+        return `${this.name} has begun sprint challenge on ${subject}`;
     }
 }
 
@@ -51,33 +51,33 @@ class ProjectManagers extends Instructor {
         this.gradClassName = att.gradClassName,
         this.favInstructor = att.favInstructor
     }
-    standUp(){
-        return `${this.name} announces to ${this.channel}, @channel standy times!`;
+    standUp(channel){
+        return `${this.name} announces to ${channel}, @channel standy times!`;
     }
-    debugsCode(){
-        return `${this.name} debugs ${student.name}'s code on ${this.subject}`;
+    debugsCode(student, subject){
+        return `${this.name} debugs ${student.name}'s code on ${subject}`;
     }
 }
 
 const Inst1 = new Person({
-    name: 'Fred',
-    age: 37,
-    location: 'Bedrock',
+    name: 'Aaron',
+    age: 25,
+    location: 'Anaheim',
     specialty: 'Python',
     favLanguage: 'Python',
     catchPhrase: 'Trust the Process!'
   });
 
 const Inst2 = new Person({
-    name: 'Fred',
-    age: 37,
-    location: 'Bedrock',
+    name: 'Brad',
+    age: 28,
+    location: 'Boston',
     specialty: 'Python',
     favLanguage: 'Python',
     catchPhrase: 'Trust the Process!'
 }); 
 
-const stu1 = new Person({
+const stu1 = new Student({
     name: 'Fred',
     age: 37,
     location: 'Bedrock',
@@ -116,3 +116,5 @@ const PM2 = new Person({
     gradClassName: 'CS1',
     favInstructor: 'Brit' 
 });
+
+console.log(stu1.PRAssignment('TEST'));
