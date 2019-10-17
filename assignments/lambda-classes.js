@@ -6,7 +6,7 @@ class Person {
         this.location = att.location
     }
     speak(){
-        return `Hello my name is ${this.name}, and I am from ${this.location}.`
+        return `Hello my name is ${this.name}, and I am from ${this.location}`;
     }
 }
 
@@ -21,7 +21,7 @@ class Instructor extends Person {
         return `Today we are learning about ${this.subject}`;
     }
     grade(){
-        return `${student.name} receives a perfect score on ${this.subject}`
+        return `${student.name} receives a perfect score on ${this.subject}`;
     }
 }
 
@@ -36,10 +36,23 @@ class Student extends Person {
         return LISTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
     }
     PRAssignment(){
-        return `${student.name} has submitted a PR for ${this.subject}`
+        return `${student.name} has submitted a PR for ${this.subject}`;
     }
     sprintChallenge(){
-        return `${student.name} has begun sprint challenge on ${this.subject}`
+        return `${student.name} has begun sprint challenge on ${this.subject}`;
     }
 }
 
+class ProjectManagers extends Instructor {
+    constructor(att){
+        super(att);
+        this.gradClassName = att.gradClassName,
+        this.favInstructor = att.favInstructor
+    }
+    standUp(){
+        return `${this.name} announces to ${this.channel}, @channel standy times!`;
+    }
+    debugsCode(){
+        return `${this.name} debugs ${student.name}'s code on ${this.subject}`;
+    }
+}
