@@ -33,7 +33,9 @@ class Student extends Person {
         this.favSubjects = att.favSubjects
     }
     listsSubjects(){
-        return LISTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+        this.favSubjects.forEach(function(item){
+            return console.log(item);
+        })
     }
     PRAssignment(){
         return `${student.name} has submitted a PR for ${this.subject}`;
@@ -56,3 +58,61 @@ class ProjectManagers extends Instructor {
         return `${this.name} debugs ${student.name}'s code on ${this.subject}`;
     }
 }
+
+const Inst1 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    specialty: 'Python',
+    favLanguage: 'Python',
+    catchPhrase: 'Trust the Process!'
+  });
+
+const Inst2 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    specialty: 'Python',
+    favLanguage: 'Python',
+    catchPhrase: 'Trust the Process!'
+}); 
+
+const stu1 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    previousBackground: 'Sales',
+    className: 'Web25',
+    favSubjects: ['HTML', 'CSS', 'JavaScript']
+  });
+
+const stu2 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    previousBackground: 'Sales',
+    className: 'Web25',
+    favSubjects: ['HTML', 'CSS', 'JavaScript']
+});
+
+const PM1 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    specialty: 'Python',
+    favLanguage: 'Python',
+    catchPhrase: 'Trust the Process!',
+    gradClassName: 'CS1',
+    favInstructor: 'Brit'    
+  });
+
+const PM2 = new Person({
+    name: 'Fred',
+    age: 37,
+    location: 'Bedrock',
+    specialty: 'Python',
+    favLanguage: 'Python',
+    catchPhrase: 'Trust the Process!',
+    gradClassName: 'CS1',
+    favInstructor: 'Brit' 
+});
